@@ -1,0 +1,163 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of [Basahr abdulaziz] — Full-Stack Web Developer" />
+  <meta name="author" content="[Bashar Abdulaziz]" />
+  <title>Bashar Abdulaziz — Portfolio</title>
+ 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+ 
+  <link rel="stylesheet" href="css/style.css" />
+ 
+</head>
+ 
+<body class="light-mode">
+
+     <!-- ════════════════════════════════════════════════════════════
+       WELCOME CORNER BADGE
+       Inspired by: designspells.com/spells/welcome-intro-animation-in-corner
+       Slides in from the bottom-right corner after 1.2 s delay
+  ═════════════════════════════════════════════════════════════ -->
+
+     
+<div class="welcome-badge" aria-hidden="true">
+    <span class="welcome-dot"> </span>
+    <span class="welcome-text">Welcome to my portfolio </span>    
+  </div>
+  
+   <!--   HEADER & NAVIGATION  --> 
+  <header class="site-header" role="banner">
+    <div class="header-inner container">
+ 
+      <!-- Logo -->
+
+      <a href="#hero" class="logo" aria-label="Home">
+        <span class="logo-first">BA</span><span class="logo-last"></span>
+      </a>
+ 
+         <nav class="main-nav" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+        <div class="header-controls">
+        <!-- Dark mode toggle -->
+        <button
+          id="darkToggle"
+          class="btn-icon"
+          aria-label="Toggle dark mode"
+          title="Toggle dark / light mode"
+        >
+          <!-- Moon icon -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <!-- Sun icon -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+
+         <!-- Hamburger for mobile -->
+        <button
+          id="menuToggle"
+          class="btn-icon btn-hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+ 
+    <!-- Mobile menu (hidden by default, toggled via JS) -->
+    <nav id="mobileMenu" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <ul role="list">
+        <li><a href="#about"      class="mobile-link">About</a></li>
+        <li><a href="#skills"     class="mobile-link">Skills</a></li>
+        <li><a href="#projects"   class="mobile-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-link">Experience</a></li>
+        <li><a href="#contact"    class="mobile-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header> 
+
+ <main id="main-content">
+ 
+ 
+   <!-- SECTION 1 · HERO -->
+    <section id="hero" class="section-hero" aria-label="Introduction">
+      <div class="container hero-inner">
+
+        <div class="hero-text">
+          <p class="hero-label animate-fadein" style="--delay: 0.1s">
+            Full-Stack Web Developer
+          </p>
+
+          <h1 class="hero-heading animate-fadein" style="--delay: 0.25s">
+            Hi, I'm<br />
+            <em>Bashar</em><br />
+            Abdulaziz.
+          </h1>
+
+          <p class="hero-sub animate-fadein" style="--delay: 0.45s">
+            I build clean, functional web applications that solve real problems.
+          </p>
+
+          <div class="hero-ctas animate-fadein" style="--delay: 0.6s">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact"  class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+
+        <!-- Hero visual / avatar -->
+        <div class="hero-visual animate-fadein" style="--delay: 0.35s">
+          <div class="avatar-frame">
+            <img src="images/bashar.jpg" alt="Bashar Abdulaziz" />
+          </div>
+
+          <!-- Status badge INSIDE hero-visual -->
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Available for hire
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll hint -->
+      <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
+        <span>Scroll</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <polyline points="19 12 12 19 5 12"/>
+        </svg>
+      </a>
+    </section>
