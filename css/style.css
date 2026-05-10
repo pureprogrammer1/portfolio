@@ -839,3 +839,38 @@ body.dark-mode .badge-low  { background: #450a0a; color: #fca5a5; }
 }
 body.dark-mode .form-status.success { background: #14532d; color: #86efac; border-color: #166534; }
 body.dark-mode .form-status.error   { background: #450a0a; color: #fca5a5; border-color: #991b1b; }
+
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+.site-footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+}
+.site-footer p {
+  font-size: 0.8rem;
+  color: var(--text-3);
+}
+.site-footer span { color: var(--accent); }
+
+/*  RESPONSIVE*/
+@media (max-width: 900px) {
+  .hero-inner        { grid-template-columns: 1fr; text-align: center; }
+  .hero-ctas         { justify-content: center; }
+  .hero-visual       { display: flex; justify-content: center; margin-top: 2rem; }
+  .avatar-frame      { width: 260px; height: 320px; }
+  .about-grid        { grid-template-columns: 1fr; }
+  .contact-grid      { grid-template-columns: 1fr; }
+  .main-nav          { display: none; }
+  .btn-hamburger     { display: flex; }
+}
+
+@media (max-width: 600px) {
+  section            { padding: 4rem 0; }
+  .hero-heading      { font-size: clamp(2.8rem, 12vw, 4rem); }
+  .projects-grid     { grid-template-columns: 1fr; }
+  .welcome-badge     { bottom: 16px; right: 16px; font-size: 0.75rem; }
+}
