@@ -1,7 +1,7 @@
 # Portfolio Project Report
 
 ## Overview
-This project is a personal portfolio for Bashar Abdulaziz. It presents profile information, skills, projects, experience, contact details, a downloadable CV, and a 3D intro animation.
+This project is a personal portfolio 
 
 ## Technologies Used
 - HTML, CSS, JavaScript
@@ -22,13 +22,6 @@ The admin dashboard is located in `admin/login.php`. After login, the admin can 
 ## AJAX Integration
 The Projects section loads data asynchronously from `api/get_projects.php`. The contact form sends data asynchronously to `api/save_contact.php` without refreshing the page.
 
-## Setup Steps
-1. Import `database/portfolio_db.sql` into MySQL.
-2. Update database settings in `api/config.php` if needed.
-3. Run the project through a PHP server such as XAMPP/Apache.
-4. Visit `index.html` for the portfolio.
-5. Visit `admin/login.php` for admin project management.
-
 ## Submission Links
 - GitHub Repository: `https://github.com/pureprogrammer1/portfolio`
-- Live Demo: add the hosted PHP/MySQL portfolio URL here after deployment.
+- Live Demo: `https://bashar.infinityfree.me/`
