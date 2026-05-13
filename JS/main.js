@@ -542,7 +542,67 @@ function loadProjects() {
     });
 }
 
-loadProjects();
+function loadProjectsFromDatabase() {
+  const grid = document.getElementById('projects-grid');
+  if (!grid) return;
+
+  const fallbackProjects = [
+    {
+      tag: 'E-commerce',
+      title: 'E-commerce Website',
+      description: 'A responsive e-commerce web app with product browsing and a clean storefront experience.',
+      tech_stack: 'React · JavaScript · CSS · Vercel',
+      github_url: '',
+      live_url: 'https://ecommerce-woad-one-13.vercel.app/'
+    }
+  ];
+
+  function renderProjects(projects) {
+    if (!projects.length) {
+      grid.innerHTML = '<p class="projects-loading">No projects yet.</p>';
+      return;
+    }
+
+    grid.innerHTML = projects.map(project => {
+      const stack = (project.tech_stack || '')
+        .split('·')
+        .map(item => `<span class="stack-pill">${item.trim()}</span>`)
+        .join('');
+
+      const githubLink = project.github_url
+        ? `<a href="${project.github_url}" class="project-link" target="_blank" rel="noopener">GitHub &rarr;</a>`
+        : '';
+
+      const liveLink = project.live_url
+        ? `<a href="${project.live_url}" class="project-link" target="_blank" rel="noopener">Live Demo &rarr;</a>`
+        : '';
+
+      return `
+        <article class="project-card">
+          <span class="project-tag">${project.tag || 'Project'}</span>
+          <h3 class="project-title">${project.title}</h3>
+          <p class="project-desc">${project.description}</p>
+          <div class="project-stack">${stack}</div>
+          <div class="project-links">
+            ${githubLink}
+            ${liveLink}
+          </div>
+        </article>`;
+    }).join('');
+  }
+
+  grid.innerHTML = '<p class="projects-loading">Loading projects...</p>';
+
+  fetch('api/get_projects.php')
+    .then(response => {
+      if (!response.ok) throw new Error('Could not load projects.');
+      return response.json();
+    })
+    .then(projects => renderProjects(Array.isArray(projects) ? projects : fallbackProjects))
+    .catch(() => renderProjects(fallbackProjects));
+}
+
+loadProjectsFromDatabase();
 
 /* ═══════════════════════════════════════════
    CONTACT FORM — validation + AJAX submit
