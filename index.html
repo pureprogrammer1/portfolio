@@ -19,7 +19,30 @@
  
 </head>
  
-<body class="light-mode">
+<body class="light-mode intro-active">
+
+  <div class="intro-loader" id="introLoader" role="status" aria-label="Portfolio welcome animation">
+    <canvas id="introThreeCanvas" class="intro-three-canvas" aria-hidden="true"></canvas>
+
+    <div class="intro-stage">
+      <div class="intro-orbit" aria-hidden="true">
+        <span class="intro-ring intro-ring-one"></span>
+        <span class="intro-ring intro-ring-two"></span>
+        <span class="intro-spark intro-spark-one"></span>
+        <span class="intro-spark intro-spark-two"></span>
+        <span class="intro-spark intro-spark-three"></span>
+      </div>
+
+      <p class="intro-kicker">Bashar Abdulaziz</p>
+      <div class="intro-lines">
+        <h1 class="intro-line intro-line-one">Welcome to my portfolio</h1>
+        <h2 class="intro-line intro-line-two">Hey, I'm Bashar</h2>
+      </div>
+    </div>
+
+    <button class="intro-skip" id="introSkip" type="button">Skip Intro</button>
+  </div>
+
    <!--   HEADER & NAVIGATION  --> 
   <header class="site-header" role="banner">
     <div class="header-inner container">
@@ -163,8 +186,8 @@
           <!-- Left: photo or decorative element -->
           <div class="about-image">
             <div class="image-card">
-            <img src="images/images/profile2.jpg" alt="Person working" />
-              <div class="image-card-placeholdqer">
+            <img src="images/profile2.jpg" alt="Person working" />
+              <div class="image-card-placeholder">
               </div>
             </div>
           </div>
@@ -315,7 +338,7 @@
               <tr>
                 <td>Design</td>
                 <td>Figma, Responsive Design, UI/UX basics</td>
-                <td><span class="badge badge-low">Beginner</span></td>
+                <td><span class="badge badge-mid">Intermediate</span></td>
                 <td>1 years</td>
               </tr>
             </tbody>
